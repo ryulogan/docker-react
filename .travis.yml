@@ -15,9 +15,9 @@ deploy:
  app: "dockerlab"
  environment: "Dockerlab-env"
  bucket-name: "elasticbeanstalk-us-east-1-561764287888"
- bucket-path: "dockerlab"
+ bucket-path: "resource"
  on:
   branch: main
  access_key_id: $AWS_Accesskey
  secret_access_key: 
-  secure: "$AWS_Secretkey"
+  secure: $AWS_Secretkey
