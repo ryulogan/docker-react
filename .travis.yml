@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t node-dev -f Dockerfile.dev .
+  - docker build -t node-dev .
 
 script:
   - docker run -d node-dev npm run test -- --coverage
