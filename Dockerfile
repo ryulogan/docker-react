@@ -2,7 +2,7 @@ from node:alpine as builder
 
 workdir /app
 
-copy package.json . 
+copy package*.json ./ 
 
 RUN npm install 
 
@@ -13,4 +13,4 @@ run npm run build
 from nginx
 
 EXPOSE 80
-copy --from=builder /app/build /usr/share/nginx/html
+copy --from=0 /app/build /usr/share/nginx/html
